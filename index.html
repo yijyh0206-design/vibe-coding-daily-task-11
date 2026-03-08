@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Google OAuth 登入範例</title>
+		<link rel="stylesheet" href="./styles.css" />
+
+		<script
+			src="https://accounts.google.com/gsi/client"
+			async
+			defer
+			onload="onGisLoaded()"
+		></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="card" id="loginCard">
+				<h1>Google OAuth 登入範例</h1>
+				<p class="muted">點擊下方按鈕，透過 Google 帳號登入</p>
+				<button id="btnSignIn" class="btn primary" disabled>登入 Google</button>
+				<p id="status" class="status muted"></p>
+			</div>
+
+			<div class="card hidden" id="profileCard">
+				<div class="avatar" id="userAvatar"></div>
+				<h2 id="userName"></h2>
+				<p class="muted user-email" id="userEmail"></p>
+				<button id="btnSignOut" class="btn">登出</button>
+			</div>
+		</div>
+
+		<script src="./app.js"></script>
+	</body>
+</html>
