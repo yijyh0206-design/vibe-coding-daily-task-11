@@ -1,5 +1,5 @@
 /* =========================
-   你需要填的設定
+  你需要填的設定
 ========================= */
 const CONFIG = {
 	CLIENT_ID: "在這裡填入你的 Google API Client ID",
@@ -8,14 +8,14 @@ const CONFIG = {
 };
 
 /* =========================
-   全域狀態
+  全域狀態
 ========================= */
 let accessToken = "";
 let tokenClient = null;
 let gisReady = false;
 
 /* =========================
-   DOM
+  DOM
 ========================= */
 const btnSignIn = document.querySelector("#btnSignIn");
 const btnSignOut = document.querySelector("#btnSignOut");
@@ -23,11 +23,10 @@ const statusEl = document.querySelector("#status");
 const loginCard = document.querySelector("#loginCard");
 const profileCard = document.querySelector("#profileCard");
 const userNameEl = document.querySelector("#userName");
-const userEmailEl = document.querySelector("#userEmail");
 const userAvatarEl = document.querySelector("#userAvatar");
 
 /* =========================
-   給 index.html 的 GSI onload 呼叫
+  給 index.html 的 GSI onload 呼叫
 ========================= */
 window.onGisLoaded = function () {
 	gisReady = true;
@@ -70,7 +69,7 @@ window.onGisLoaded = function () {
 };
 
 /* =========================
-   事件綁定
+  事件綁定
 ========================= */
 btnSignIn.addEventListener("click", () => {
 	if (!gisReady || !tokenClient) {
@@ -95,15 +94,13 @@ btnSignOut.addEventListener("click", () => {
 });
 
 /* =========================
-   UI 切換
+  UI 切換
 ========================= */
 function showProfile(userData) {
 	const name = userData.name || "使用者";
-	const email = userData.email || "";
 	const picture = userData.picture || "";
 
 	userNameEl.textContent = name;
-	userEmailEl.textContent = email;
 
 	if (picture) {
 		userAvatarEl.innerHTML = `<img src="${picture}" alt="${name}" />`;
