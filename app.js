@@ -2,7 +2,7 @@
   你需要填的設定
 ========================= */
 const CONFIG = {
-	CLIENT_ID: "在這裡填入你的 Google API Client ID",
+	CLIENT_ID: "1034259283927-bl4e3h0oo871vsdh627ol8m2dmubf068.apps.googleusercontent.com",
 	SCOPES:
 		"https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email",
 };
